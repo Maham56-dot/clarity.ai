@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  /* Theme mapping */
+  --color-app-bg: var(--app-bg);
+  --color-app-text: var(--app-text);
+  --color-app-card: var(--app-card);
+  --color-app-border: var(--app-border);
+}
+
+:root {
+  --app-bg: #FFFFFF;
+  --app-text: #111111;
+  --app-card: #F5F5F5;
+  --app-border: #E5E5E5;
+}
+
+.dark {
+  --app-bg: #000000;
+  --app-text: #FFFFFF;
+  --app-card: #1A1A1A;
+  --app-border: #2A2A2A;
+}
+
+body {
+  @apply bg-app-bg text-app-text transition-colors duration-500 ease-in-out font-sans;
+}
+
+.markdown-body ul {
+  @apply list-disc list-outside ml-6 space-y-4 my-4;
+}
+
+.markdown-body ol {
+  @apply list-decimal list-outside ml-6 space-y-4 my-4;
+}
+
+.markdown-body p {
+  @apply mb-4;
+}
+
+.markdown-body strong {
+  @apply font-semibold;
+}
